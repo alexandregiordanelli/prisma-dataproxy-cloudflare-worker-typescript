@@ -10,13 +10,9 @@ async function handleEvent(event: FetchEvent): Promise<Response> {
 
   // waitUntil method is used for sending logs, after response is sent
   event.waitUntil(
-    prisma.log.create({
+    prisma.oi.create({
       data: {
-        level: 'Info',
-        message: `${request.method} ${request.url}`,
-        meta: {
-          headers: JSON.stringify(request.headers),
-        },
+        casa: "oiii"
       },
     })
   )

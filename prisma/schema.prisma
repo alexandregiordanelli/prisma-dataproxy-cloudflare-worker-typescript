@@ -8,15 +8,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Log {
+model Oi {
   id      String @id @default(auto()) @map("_id") @db.ObjectId
-  level   Level
-  message String
-  meta    Json
-}
-
-enum Level {
-  Info
-  Warn
-  Error
+  casa  String
 }
