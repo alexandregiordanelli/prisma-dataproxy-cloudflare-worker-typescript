@@ -12,7 +12,7 @@ async function handleEvent(event: FetchEvent): Promise<Response> {
   event.waitUntil(
     prisma.oi.create({
       data: {
-        casa: "oiii"
+        casa: "oiii1"
       },
     })
   )
